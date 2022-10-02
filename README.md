@@ -29,6 +29,7 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 - [x] Launch 🚀
 - [ ] Implement Content Security Policy
 - [ ] Publish projects section
+- [ ] Move hosting
 
 ## Licenses
 
