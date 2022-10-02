@@ -1,0 +1,85 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/future/image'
+import cathedralAndBazaar from './cathedral-and-bazaar.png'
+
+export const meta = {
+  author: 'Carl Gleisner',
+  date: '2022-10-01',
+  title: 'Introduktion till open source-licenser',
+  description:
+    'I princip alla mjukvaror som utvecklas idag består till största delen av mjukvara från tredje parter som tillhandahålls under open source-licenser. Det här är en introduktion till licenserna som anger spelreglerna för den här revolutionen.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+{`${meta.description}`}
+
+<Image
+  className={'print:hidden'}
+  src={cathedralAndBazaar}
+  alt="En AI-genererad målning av en basar intill en katedral."
+  priority
+/>
+
+Open source är givetvis så mycket mer än bara licenserna men i den här artikeln skrapar jag på ytan av den främsta vattendelaren när det gäller open source-licenser.
+
+## Licenstyper
+
+Det finns två huvudsakliga licenstyper:
+
+1. tillåtande och
+2. ömsesidiga.
+
+Genom att känna till huvuddragen i licenstyperna är det lättare att orientera sig i licensfloran.
+
+### 1. Tillåtande licenser
+
+De tillåtande licenserna kallas ibland även för **akademiska licenser** eftersom de härrör från den akademiska världen. I korthet önskade de akademiska institutionerna klargöra för andra att det var **tillåtet att använda** mjukvaran och göra ändringar av denna samt att sprida den vidare. Utöver att klargöra detta önskade institutionerna även **friskriva sig** från ansvar för eventuella skador som skulle kunna uppstå. Slutligen önskade man även, vilket är brukligt inom den akademiska världen, att **upphovsmännen skulle namnges**.
+
+En kärnegenskap för de tillåtande licenserna är att licenstagarna får **licensiera mjukvaran till andra under egna villkor**. Denna egenskap har varit attraktiv för näringslivet som tack vare detta enkelt kunnat dra nytta av open source-mjukvara utan att rubba förutsättningarna för sina etablerade affärsmodeller.
+
+Trots att det är tillåtet att licensiera verken under andra villkor kvarstår givetvis skyldigheten att tillkännage den ursprunglige upphovsmannen. I och med att open source-mjukvara används i princip överallt så går det hitta sådana tillkännagivanden på åtskilliga ställen i sin omgivning. Se t.ex. operativsystemet i din telefon, apparna i telefonen eller instrumentpanelen i din bil. Detta gäller dock inte bara i konsumentprodukter utan även i industrin, infrastruktur, försvar, rymd, på mars osv.
+
+Några populära tillåtande licenser är:
+
+- Berkely Software Distribution (BSD, en familj av licenser)
+- Massachusetts Institute of Technology License (MIT)
+- Apache License, Version 2.0 (Apache 2.0)
+
+Medan BSD- och MIT-licenserna är enkla och kortfattade så är Apache 2.0 klart längre och mer utförlig. Framförallt innehåller Apache 2.0, till skillnad från MIT och BSD, en upplåtelse av eventuella **patent** hänförliga till den licensierade mjukvaran tillsammans med försvarsklausuler där upplåtelsen dras tillbaka i händelse av tvist. Mjukvarupatent är dock ett stort ämne som, milt uttryckt, inte är helt oproblematiskt.
+
+> Patent tillhör den industriella delen av immaterialrätten och utgör **ett skydd för idéer** i form av uppfinningar. De erhålls genom att registrering. Upphovsrätt avser istället **ett skydd för uttryck** men inte den bakomliggande idén. Upphovsrätten erhålls redan genom att en person skapar ett verk. Ursprungligen omfattade upphovsrätt verk i form av text, målningar och musik. Datorprogram är dock speciella på så sätt att de visserligen utgör uttryck likt litterära verk men även innefattar på något slags funktionalitet. Denna funktion har ofta omfattande industriell betydelse och ger liv åt idéer på ett annat sätt än t.ex. en teknisk beskrivning, vilket alltså traditionellt inte aktualiserats för upphovsrätter. Utvecklingen av rättsskyddet för datorprogram har lett till att upphovsrätt är det främsta skyddet men patent är inte uteslutet som skydd i vissa lägen, framförallt i USA där patent för datorprogram förekommer i väsentligt större omfattning.
+
+### 2. Ömsesidiga licenser
+
+De ömsesidiga licenserna härrör ur rörelsen för mjukvarufrihet (software freedom). Det främsta syftet med ömsesidiga licenser är att tillse att den aktuella mjukvaran förblir tillgänglig för användarna under de villkor som den ursprungligen spreds under. Detta uppnås genom licensvillkor där licenstagaren **åtar sig att tillämpa samma licensvillkor** vid distribution av ändrade versioner, d.v.s. att visa ömsesidighet till andra.
+
+Notera att det bara är ändringar av den licensierade mjukvaran som ska licensieras under samma villkor. I fråga om de delar av mjukvaran som inte ändrats erhåller licenstagare nedströms nämligen en licens från den ursprunglige licensgivaren. Bearbetaren saknar således – till skillnad från fallet med tillåtande licenser – rätt att licensiera det ursprungliga verket till andra under egna licensvillkor. Bearbetaren har istället en fullmakt att upplåta mjukvaran såvitt avser delar som denne inte skapat själv.
+
+Resultatet av att varje mottagare av den licensierade mjukvaran ges en licens från varje bidragsgivare är ett intrikat system av upplåtna licenser i de fall där antalet bidragsgivare är stort. Som exempel kan Linux-kärnan nämnas där antalet bidragsgivare är flera tusen. I praktiken kan därför ingen enskild aktör kan förfoga över licensvillkoren som gäller för Linux-kärnan.
+
+Bidragsgivarna kan givetvis **överlåta sina rättigheter** till den som utvecklar och förvaltar den aktuella mjukvaran genom ett s.k. _contributor license agreement_ (CLA). Sådana överlåtelser är dock mer undantag än regel och något som i stor utsträckning ses ner på inom rörelsen för fri mjukvara. Det förhållningssättet är förståeligt eftersom det besegrar själva syftet med att licensiera en mjukvara under en ömsesidig licens, d.v.s. att tillse att mjukvaran förblir tillgänglig för användarna under just de ursprungliga villkoren.
+
+En central fråga i sammanhanget – som inte sällan orsakar besvär – är vilka delar av den distribuerade mjukvaran som omfattas av den ömsesidiga förpliktelsen. En ömsesidig licens som GNU General Public License version 2.0 (GPLv2) utgår från definitionen av vad som utgör ett s.k. **härlett verk** under amerikansk lagstiftning om upphovsrätt tillsammans med ett klargörande av definitionen. Klargörandet inför olyckligt nog en modifikation av definitionen så som den uttrycks i amerikansk rätt. Det är inte helt lätt eller enkelt att avgöra vad som är ett härlett verk i fråga om mjukvara och modifieringen av definitionen gör inte den uppgiften lättare. Bedömningen påverkas i praktiken även av vilket lands domstol som tolkar licensvillkoret eftersom olika rättsordningar tillämpar olika tolkningsprinciper.
+
+I korthet kan man därför säga att alla raka och entydiga svar som med bestämdhet slår fast innebörden av den ömsesidiga förpliktelsen i GPLv2, eller dess efterföljare GPLv3, kommer att vara felaktiga. För den som uppskattar tydliga villkor och raka svar är saken alltså otillfreds&shy;ställande.
+
+Den praktiska betydelsen av detta framgår då någon t.ex. utvecklar och distribuerar en mjukvara som inkluderar delar av en annan mjukvara som anskaffats under en ömsesidig licens. Denne kommer befinna sig i en situation där det finns en osäkerhet om huruvida licensgivarna till den inkluderade mjukvaran kan komma att påstå att hela mjukvaran ska spridas under samma villkor sedan den inkluderade mjukvaran har distribuerats tillsammans med den mjukvara som utvecklats egenhändigt. Det finns inget enkelt svar i det här läget.
+
+Den som bedriver en näringsverksamhet behöver i allmänhet kunna planera hushållningen av resurser. Företag fördrar därför ofta **förutsebarhet framför osäkerhet**. Detta gäller även då förutsebarheten kostar extra i form av ett högre pris.
+
+Oklarheten i fråga om omfattningen av den ömsesidiga förpliktelsen i kombination med osäkerheten i fråga om huruvida en bidragsgivare kan komma att framställa något slags anspråk, bör inte uppfattas som anledning till en reflexmässig oro eller ett schablonartat avfärdande av mjukvaror som licensierats under en ömsesidig licens. Det betyder inte heller att sådana mjukvaror skulle sakna betydelse i näringslivet. Tvärtom har de en stor betydelse och näringslivet, för att inte säga hela samhället, är uppenbarligen beroende av t.ex. Linux och många andra **fantastiska mjukvaror** som tillhandahålls under ömsesidiga licenser.
+
+Det förekommer att juristkollegor och företrädare för näringslivets intressen överdriver implikationerna av de ömsesidiga förpliktelserna genom att sprida det som kallas för _fear uncertainty and doubt_ (FUD). I verkligheten är saken dock mer nyanserad och måste analyseras närmre vid de tillfällen då den ömsesidiga förpliktelsen kan komma att ha betydelse.
+
+Det som är avgörande i sammanhanget är hur den aktuella mjukvaran förfogas över. Först när detta är klarlagt kan förfogandet sättas i sitt rättsliga sammanhang. Min erfarenhet är att det arbetet kräver förhållandevis djup teknisk förståelse och att det gäller såväl hos den som ger rådgivning som hos den som tar emot rådgivningen.
+
+## Medskick
+
+Om er organisation utvecklar mjukvaror för andras användning hoppas jag ni väljer att ta med we följande punkter.
+
+1. Har vi en process som ger oss kännedom om vilka mjukvaror från tredje parter som vi inkluderar i våra egna produkter?
+2. Har vi en policy som klargör vilka licenser som inte kräver närmre granskning före inkludering?
+3. Har vi bestämt oss för att vi vill vara en "god medborgare" i open source-världen?
+
+Om det inte är möjligt att svara ja på några av frågorna ovan så finns det goda skäl för att se över detta och komma ikapp samtiden.
