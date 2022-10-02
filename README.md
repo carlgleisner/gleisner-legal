@@ -27,6 +27,7 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 ## Roadmap 🚧
 
 - [x] Launch 🚀
+- [ ] Implement Content Security Policy
 - [ ] Publish projects section
 
 ## Licenses

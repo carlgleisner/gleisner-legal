@@ -29,11 +29,11 @@ const securityHeaders = [
     key: 'Cross-Origin-Opener-Policy-Report-Only',
     value: 'same-origin; report-to="default"',
   },
-  {
-    key: 'Content-Security-Policy-Report-Only',
-    value:
-      "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; report-uri https://fyhx63fm.uriports.com/reports/report; report-to default",
-  },
+  // {
+  //   key: 'Content-Security-Policy-Report-Only',
+  //   value:
+  //     "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; report-uri https://fyhx63fm.uriports.com/reports/report; report-to default",
+  // },
   {
     key: 'X-DNS-Prefetch-Control',
     value: 'on',
