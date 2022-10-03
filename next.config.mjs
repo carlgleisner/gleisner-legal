@@ -8,8 +8,9 @@ const securityHeaders = [
     value: 'default="https://fyhx63fm.uriports.com/reports"',
   },
   {
-    key: 'Permissions-Policy-Report-Only',
-    value: 'microphone=(), camera=(), fullscreen=*, payment=()',
+    key: 'Permissions-Policy',
+    value:
+      'accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(self), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(self), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()',
   },
   {
     key: 'NEL',
@@ -49,6 +50,14 @@ const securityHeaders = [
   {
     key: 'X-XSS-Protection',
     value: '0',
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'same-origin',
   },
 ]
 
