@@ -68,6 +68,16 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta
+          name="theme-color"
+          content="#fafafa"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#18181b"
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-zinc-900">
         <Main />
