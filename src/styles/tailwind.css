@@ -1,4 +1,29 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import './prism.css';
+
+::selection {
+  background-color: #0f766e;
+  color: #fefefe;
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 @import 'tailwindcss/utilities';
