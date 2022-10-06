@@ -24,20 +24,21 @@ export function Footer() {
                 <NavLink href="/om">Om</NavLink>
                 <NavLink href="/artiklar">Artiklar</NavLink>
                 {/* 🐣✨🥸 */}
-                {/* <NavLink href="/projekt">Projekt</NavLink> */}
+                <NavLink href="/projekt">Projekt</NavLink>
                 {/* <NavLink href="#">Onion site 🧅</NavLink> */}
               </div>
               <Link
                 href="/.well-known/security.txt"
                 className="font-mono text-sm text-zinc-500 transition hover:text-teal-500 dark:text-zinc-400 dark:hover:text-teal-400"
               >
-                security.txt
+                security.txt{' '}
               </Link>
               <Link
                 href="https://keys.openpgp.org/search?q=755512972B75E76EB430C5839502AB6A2EBCDE64"
-                className="ont-mono text-sm text-zinc-500 transition hover:text-teal-500 dark:text-zinc-400 dark:hover:text-teal-400"
+                className="font-mono text-sm text-zinc-500 transition hover:text-teal-500 dark:text-zinc-400 dark:hover:text-teal-400"
               >
-                7555 1297 2B75 E76E B430 C583 9502 AB6A 2EBC DE64
+                7555 1297 2B75 E76E B430 <br className="block sm:hidden" /> C583
+                9502 AB6A 2EBC DE64
               </Link>
             </div>
           </Container.Inner>
