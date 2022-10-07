@@ -50,8 +50,8 @@ const projects = [
     description:
       'En lättillgänglig och kollaborativ version av MSB:s metodstöd för informationssäkerhet.',
     link: {
-      href: 'https://github.com/carlgleisner/infosec-wiki',
-      label: 'github.com',
+      href: 'https://infosec.gleisner.wiki',
+      label: 'infosec.gleisner.wiki',
     },
     logo: infosecLagstiftningIcon,
     published: true,
