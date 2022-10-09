@@ -66,11 +66,20 @@ const securityHeaders = [
   },
 ]
 
+// Do not use image optimization for static builds (i.e. onion site)
+var useUnoptimizedImages = false
+if (process.env.npm_lifecycle_event == 'static') {
+  useUnoptimizedImages = true
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    unoptimized: useUnoptimizedImages,
+  },
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
