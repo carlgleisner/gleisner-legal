@@ -65,7 +65,10 @@ export function ArticleLayout({
                   <span className="print:ml-0">{formatDate(meta.date)}</span>
                 </time>
               </header>
-              <Prose className="mt-8">{children}</Prose>
+              <Prose className="mt-8">
+                <p className="text-xl font-medium">{`${meta.description}`}</p>
+                {children}
+              </Prose>
             </article>
           </div>
         </div>
