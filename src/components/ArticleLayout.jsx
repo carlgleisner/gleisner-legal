@@ -35,6 +35,15 @@ export function ArticleLayout({
       <Head>
         <title>{`${meta.title} - ${meta.author}`}</title>
         <meta name="description" content={meta.description} />
+        <meta name="author" content={meta.author} />
+        <meta name="date" content={meta.author} />
+        {/* Twitter card */}
+        <meta name="twitter:card" content={meta.description} />
+        <meta name="twitter:site" content="@carlgleisner" />
+        <meta name="twitter:creator" content="@carlgleisner" />
+        <meta property="twitter:domain" content="gleisner.legal" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
       </Head>
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
