@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.gleisner.legal
+
+# Sitemaps
+Sitemap: https://www.gleisner.legal/sitemap.xml
