@@ -38,7 +38,7 @@ export function ArticleLayout({
         <meta name="author" content={meta.author} />
         <meta name="date" content={meta.author} />
         {/* Twitter card */}
-        <meta name="twitter:card" content={meta.description} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@carlgleisner" />
         <meta name="twitter:creator" content="@carlgleisner" />
         <meta property="twitter:domain" content="gleisner.legal" />
