@@ -27,25 +27,34 @@ const icons = {
   warning: (props) => <ExclamationTriangleIcon color="amber" {...props} />,
 }
 
-export function Callout({ type = 'note', title, children }) {
+export function Callout({
+  as: Component = 'div',
+  type = 'note',
+  title,
+  children,
+}) {
   let IconComponent = icons[type]
 
   return (
-    <div
-      className={clsx(
-        'not-prose my-8 flex rounded-xl p-6',
-        styles[type].container
-      )}
-    >
-      <IconComponent className={clsx('h-8 w-8 flex-none', styles[type].icon)} />
-      <div className="ml-4 flex-auto">
-        <p className={clsx('m-0 text-xl font-medium', styles[type].title)}>
-          {title}
-        </p>
-        <div className={clsx('prose mt-2.5', styles[type].body)}>
-          {children}
+    <>
+      <Component
+        className={clsx(
+          'not-prose my-8 flex rounded-xl p-6',
+          styles[type].container
+        )}
+      >
+        <IconComponent
+          className={clsx('h-8 w-8 flex-none', styles[type].icon)}
+        />
+        <div className="ml-4 flex-auto">
+          <p className={clsx('m-0 text-xl font-medium', styles[type].title)}>
+            {title}
+          </p>
+          <div className={clsx('prose mt-2.5', styles[type].body)}>
+            {children}
+          </div>
         </div>
-      </div>
-    </div>
+      </Component>
+    </>
   )
 }
