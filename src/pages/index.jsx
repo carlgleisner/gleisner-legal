@@ -1,16 +1,15 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-// import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
+import {
+  RambergAdvokaterLogo,
+  SverigesDomstolarLogo,
+  UppsalaUniversitetLogo,
+  WesslauSoderqvistLogo,
+} from '@/components/Logos'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoWsa from '@/images/logos/wsa.png'
-import logoRamberg from '@/images/logos/ramberg.png'
-import logoSverigesdomstolar from '@/images/logos/sverigesdomstolar.png'
-import logoUu from '@/images/logos/uu.png'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -60,19 +59,6 @@ function AcademicCapIcon(props) {
   )
 }
 
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 function Article({ article }) {
   return (
     <Card as="article">
@@ -101,7 +87,7 @@ function Resume() {
     {
       company: 'Wesslau Söderqvist Advokatbyrå',
       title: 'Biträdande jurist',
-      logo: logoWsa,
+      logo: WesslauSoderqvistLogo,
       start: '2019',
       end: {
         label: 'Nu',
@@ -111,14 +97,14 @@ function Resume() {
     {
       company: 'Ramberg Advokater',
       title: 'Biträdande jurist',
-      logo: logoRamberg,
+      logo: RambergAdvokaterLogo,
       start: '2018',
       end: '2019',
     },
     {
       company: 'Gävle tingsrätt',
       title: 'Tingsnotarie',
-      logo: logoSverigesdomstolar,
+      logo: SverigesDomstolarLogo,
       start: '2016',
       end: '2018',
     },
@@ -128,13 +114,13 @@ function Resume() {
     {
       institution: 'Uppsala Universitet',
       title: 'Juristexamen',
-      logo: logoUu,
+      logo: UppsalaUniversitetLogo,
       graduated: '2016',
     },
     {
       institution: 'Uppsala Universitet',
       title: 'Teknologiekandidat, datatenik',
-      logo: logoUu,
+      logo: UppsalaUniversitetLogo,
       graduated: '2013',
       start: '2013',
       end: '2019',
@@ -151,12 +137,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={role.logo}
-                alt=""
-                className="h-7 w-7 rounded-full"
-                unoptimized
-              />
+              <role.logo className="h-7 w-7 rounded-full" />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Företag</dt>
@@ -194,12 +175,7 @@ function Resume() {
         {education.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={role.logo}
-                alt=""
-                className="h-7 w-7 rounded-full"
-                unoptimized
-              />
+              <role.logo className="h-7 w-7 rounded-full" />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Institution</dt>
@@ -225,10 +201,6 @@ function Resume() {
           </li>
         ))}
       </ol>
-      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Ladda ner CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button> */}
     </div>
   )
 }
@@ -281,7 +253,6 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-      {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
