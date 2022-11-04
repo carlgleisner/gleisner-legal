@@ -1,6 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
-import Head from 'next/head'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import cathedralAndBazaar from './cathedral-and-bazaar.png'
 
 export const meta = {
@@ -12,8 +11,6 @@ export const meta = {
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
-
-{`${meta.description}`}
 
 <Image
   className={'print:hidden'}

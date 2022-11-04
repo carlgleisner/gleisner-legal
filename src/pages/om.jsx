@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -19,7 +19,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-semibold text-zinc-800 transition hover:text-teal-500 dark:text-zinc-300 dark:hover:text-teal-500"
+        className="group flex text-sm font-semibold text-zinc-800 transition hover:text-teal-500 dark:text-zinc-400 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
         <span className="ml-4">{children}</span>
@@ -46,7 +46,7 @@ export default function About() {
         <title>Om - Carl Gleisner</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="Jag hjälper dig med det juridiska kring din teknik."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -66,7 +66,7 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Jag hjälper dig med det juridiska kring din teknik.
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-700 dark:text-zinc-300">
+            <div className="mt-6 space-y-7 text-base text-zinc-700 dark:text-zinc-400">
               <p>
                 Jag minns fortfarande när min far i början av 2000-talet kom hem
                 från en konferens och föreslog att jag skulle kolla in det där

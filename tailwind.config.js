@@ -52,6 +52,8 @@ module.exports = {
           '--tw-prose-pre-border': 'var(--tw-prose-invert-pre-border)',
           '--tw-prose-th-borders': 'var(--tw-prose-invert-th-borders)',
           '--tw-prose-td-borders': 'var(--tw-prose-invert-td-borders)',
+          '--tw-prose-mark-bg': 'var(--tw-prose-invert-mark-bg)',
+          '--tw-prose-mark': 'var(--tw-prose-invert-mark)',
         },
       },
       DEFAULT: {
@@ -76,8 +78,10 @@ module.exports = {
           '--tw-prose-pre-border': 'transparent',
           '--tw-prose-th-borders': theme('colors.zinc.200'),
           '--tw-prose-td-borders': theme('colors.zinc.100'),
+          '--tw-prose-mark': theme('colors.zinc.900'),
+          '--tw-prose-mark-bg': theme('colors.yellow.200 / 0.5'),
 
-          '--tw-prose-invert-body': theme('colors.zinc.300'),
+          '--tw-prose-invert-body': theme('colors.zinc.400'),
           '--tw-prose-invert-headings': theme('colors.zinc.200'),
           '--tw-prose-invert-links': theme('colors.teal.400'),
           '--tw-prose-invert-links-hover': theme('colors.teal.400'),
@@ -97,6 +101,8 @@ module.exports = {
           '--tw-prose-invert-pre-border': theme('colors.zinc.200 / 0.1'),
           '--tw-prose-invert-th-borders': theme('colors.zinc.700'),
           '--tw-prose-invert-td-borders': theme('colors.zinc.800'),
+          '--tw-prose-invert-mark': theme('colors.zinc.300'),
+          '--tw-prose-invert-mark-bg': theme('colors.yellow.400 / 0.5'),
 
           // Base
           color: 'var(--tw-prose-body)',
@@ -309,6 +315,12 @@ module.exports = {
           },
           ':is(tbody, tfoot) td:not(:last-child)': {
             paddingRight: theme('spacing.2'),
+          },
+
+          // Mark - text highlighting
+          mark: {
+            backgroundColor: 'var(--tw-prose-mark-bg)',
+            color: 'var(--tw-prose-mark)',
           },
         },
       },
