@@ -9,7 +9,12 @@ import {
 } from '@/components/Logos'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import {
+  TwitterIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  MastodonIcon,
+} from '@/components/SocialIcons'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -235,6 +240,12 @@ export default function Home({ articles }) {
             source-licenser.
           </p>
           <div className="mt-6 flex gap-6">
+            <SocialLink
+              href="https://infosec.exchange/web/@carlgleisner"
+              aria-label="Följ på Mastodon"
+              rel="me"
+              icon={MastodonIcon}
+            />
             <SocialLink
               href="https://twitter.com/carlgleisner"
               aria-label="Följ på Twitter"
