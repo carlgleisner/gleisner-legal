@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
 Contact: mailto:carl@gleisner.legal
 Expires: 2023-10-10T10:00:00.000Z
 Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/755512972B75E76EB430C5839502AB6A2EBCDE64
 Preferred-Languages: en, sv
 Canonical: https://www.gleisner.legal/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQR1VRKXK3XnbrQwxYOVAqtqLrzeZAUCY2dGSgAKCRCVAqtqLrze
+ZNy5AQDSB/mHVU3uGXdYUJMMRdxfrdGnDGjxwK1hdzK63ZbxGQEA8ELh4YYgfcsF
+Dq/eag4l94PEfdBzIAFN7JR4FqBzhAw=
+=6pEp
+-----END PGP SIGNATURE-----
