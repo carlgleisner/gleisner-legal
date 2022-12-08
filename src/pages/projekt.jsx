@@ -3,47 +3,20 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoVagledningOpenSourceLicenser from '@/images/logos/vägledning-open-source-licenser.svg'
-import ndaIcon from '@/images/logos/nda.svg'
 import infosecLagstiftningIcon from '@/images/logos/infosec-lagstiftning.svg'
-import webserviceIcon from '@/images/logos/webservice-icon.svg'
+import nis2Icon from '@/images/logos/nis2.svg'
 
-// 🐣✨🥸
 const projects = [
   {
-    name: 'Sekretessavtal',
+    name: 'NIS2-direktivet',
     description:
-      'Enkla mallar för sekretessavtal tillsammans med en övergripande vägledning.',
+      'En samling resurser kring NIS2-direktivet.',
     link: {
-      href: 'http://github.com/carlgleisner/sekretessavtal',
+      href: 'https://github.com/wesslausoderqvist/nis2',
       label: 'github.com',
     },
-    logo: ndaIcon,
-    published: false,
-  },
-  {
-    name: 'Licensavtal för webbtjänster',
-    description:
-      'Ett licensavtal för öppet tillgängliga webbtjänster som tillhandahåller öppna data.',
-    link: { href: '#', label: 'github.com' },
-    logo: webserviceIcon,
-    published: false,
-  },
-  {
-    name: 'Vägledning vid val open source-licenser',
-    description:
-      'Hur du bör tänka vid val av open source-licens när en mjukvara ska öppnas upp.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoVagledningOpenSourceLicenser,
-    published: false,
-  },
-  {
-    name: 'Lagstiftning om informationssäkerhet',
-    description:
-      'En sammanställning av gällande lagstiftning inom informationssäkerhet samt beskrivning av skyddsföremål och tillämpningsområde m.m.',
-    link: { href: '#', label: 'github.com' },
-    logo: infosecLagstiftningIcon,
-    published: false,
+    logo: nis2Icon,
+    published: true,
   },
   {
     name: 'Wiki för informationssäkerhet',
