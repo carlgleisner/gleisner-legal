@@ -28,3 +28,13 @@ input[type='email'] {
   appearance: none;
 }
 @import 'tailwindcss/utilities';
+
+p,
+h2,
+h3,
+h4,
+h5,
+li,
+ol {
+  hyphens: auto;
+}
