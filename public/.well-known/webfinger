@@ -1,0 +1,23 @@
+{
+  "subject": "acct:carlgleisner@infosec.exchange",
+  "aliases": [
+    "https://infosec.exchange/@carlgleisner",
+    "https://infosec.exchange/users/carlgleisner"
+  ],
+  "links": [
+     {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://infosec.exchange/@carlgleisner"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://infosec.exchange/users/carlgleisner"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://infosec.exchange/authorize_interaction?uri={uri}"
+    }
+  ]
+}
