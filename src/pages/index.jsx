@@ -217,7 +217,7 @@ export default function Home({ articles }) {
         <title>Carl Gleisner - Jurist som förstår teknik</title>
         <meta
           name="description"
-          content="Jag heter Carl Gleisner och arbetar som biträdande jurist på Wesslau Söderqvist Advokatbyrå i Stockholm. Min specialitet är att lösa juridiska problem som rör teknik. Fråga gärna mig om informationssäkerhet eller open source-licenser"
+          content="Jag heter Carl Gleisner och arbetar som biträdande jurist på Wesslau Söderqvist Advokatbyrå i Stockholm. Min specialitet är att lösa juridiska problem som rör teknik. Fråga gärna mig om informationssäkerhet eller open source-licenser."
         />
       </Head>
       <Container className="mt-9">
