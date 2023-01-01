@@ -8,19 +8,20 @@ export async function generateRssFeed() {
   let articles = await getAllArticles()
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   let author = {
-    name: 'Spencer Sharp',
-    email: 'spencer@planetaria.tech',
+    name: 'Carl Gleisner',
+    email: 'carl@gleisner.legal',
   }
 
   let feed = new Feed({
     title: author.name,
-    description: 'Your blog description',
+    description:
+      'Jag heter Carl Gleisner och arbetar som biträdande jurist på Wesslau Söderqvist Advokatbyrå i Stockholm. Min specialitet är att lösa juridiska problem som rör teknik. Fråga gärna mig om informationssäkerhet eller open source-licenser.',
     author,
     id: siteUrl,
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}`,
+    copyright: '',
     feedLinks: {
       rss2: `${siteUrl}/rss/feed.xml`,
       json: `${siteUrl}/rss/feed.json`,
