@@ -17,6 +17,8 @@
     "@heroicons/react": "^2.0.11",
     "@mapbox/rehype-prism": "^0.7.0",
     "@mdx-js/loader": "^2.1.2",
+    "@mdx-js/react": "*",
+    "@next/env": "*",
     "@next/mdx": "^12.2.3",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.7",
@@ -24,13 +26,16 @@
     "fast-glob": "^3.2.11",
     "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
-    "next": "^13.0.0",
+    "next": "13.0.2",
     "next-sitemap": "^3.1.29",
+    "postcss": ">=8.4.0 <9.0.0",
     "postcss-focus-visible": "^6.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark-gfm": "^3.0.1",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.1.4",
+    "typescript": ">=3.3.1",
+    "webpack": ">=4"
   },
   "devDependencies": {
     "eslint": "8.19.0",
