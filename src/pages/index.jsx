@@ -116,13 +116,13 @@ function Resume() {
 
   let education = [
     {
-      institution: 'Uppsala Universitet',
+      institution: 'Uppsala universitet',
       title: 'Juristexamen',
       logo: UppsalaUniversitetLogo,
       graduated: '2016',
     },
     {
-      institution: 'Uppsala Universitet',
+      institution: 'Uppsala universitet',
       title: 'Teknologiekandidat, datatenik',
       logo: UppsalaUniversitetLogo,
       graduated: '2013',
