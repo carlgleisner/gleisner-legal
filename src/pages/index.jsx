@@ -10,7 +10,6 @@ import {
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
   GitHubIcon,
   LinkedInIcon,
   MastodonIcon,
@@ -245,11 +244,6 @@ export default function Home({ articles }) {
               aria-label="Följ på Mastodon"
               rel="me"
               icon={MastodonIcon}
-            />
-            <SocialLink
-              href="https://twitter.com/carlgleisner"
-              aria-label="Följ på Twitter"
-              icon={TwitterIcon}
             />
             <SocialLink
               href="https://github.com/carlgleisner"

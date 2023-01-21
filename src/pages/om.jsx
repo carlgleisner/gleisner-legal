@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   MastodonIcon,
-  TwitterIcon,
   GitHubIcon,
   LinkedInIcon,
   VCardIcon,
@@ -152,14 +151,6 @@ export default function About() {
                 icon={MastodonIcon}
               >
                 Mastodon
-              </SocialLink>
-              <SocialLink
-                href="https://www.twitter.com/carlgleisner"
-                aria-label="Följ på Twitter"
-                icon={TwitterIcon}
-                className="mt-4"
-              >
-                Twitter
               </SocialLink>
               <SocialLink
                 href="https://www.github.com/carlgleisner"
