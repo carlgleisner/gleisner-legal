@@ -84,6 +84,15 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/mastodon',
+        destination: 'https://infosec.exchange/@carlgleisner',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 const withMDX = nextMDX({
