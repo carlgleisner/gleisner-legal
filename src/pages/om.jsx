@@ -180,7 +180,7 @@ export default function About() {
                 icon={KeyIcon}
                 className="mt-4"
               >
-                Publik nyckel för e-post
+                PGP-nyckel
               </SocialLink>
               <SocialLink
                 href="https://www.wsa.se/medarbetare/carl-gleisner"
