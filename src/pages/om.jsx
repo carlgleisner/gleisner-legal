@@ -53,13 +53,15 @@ export default function About() {
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
-              <Image
-                src={portraitImage}
-                alt="Porträtt av Carl Gleisner"
-                sizes="(min-width: 1024px) 32rem, 20rem"
-                className="aspect-square rounded-xl bg-zinc-100 object-cover shadow-red-500 dark:bg-zinc-800 lg:aspect-auto"
-                priority
-              />
+              <div className="relative aspect-square overflow-hidden rounded-xl sm:aspect-auto">
+                <Image
+                  src={portraitImage}
+                  alt="Porträtt av Carl Gleisner"
+                  sizes="(min-width: 1024px) 32rem, 20rem"
+                  placeholder="blur"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
