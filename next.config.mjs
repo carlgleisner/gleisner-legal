@@ -54,7 +54,7 @@ const securityHeaders = [
   {
     key: 'onion-location',
     value:
-      'http://quuajjkvad72uncj2vguxf3gmy3ds7ybuunnctk3d2we7hajup2c73ad.onion',
+      'http://s4yk6nvxgqqfkg7ndhjmuy7xanqgxyx3gtduakbn5helggev4wcyflad.onion',
   },
 ]
 

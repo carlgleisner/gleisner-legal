@@ -23,7 +23,7 @@ export function Footer() {
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/om">Om</NavLink>
                 <NavLink href="/artiklar">Artiklar</NavLink>
-                <NavLink href="http://quuajjkvad72uncj2vguxf3gmy3ds7ybuunnctk3d2we7hajup2c73ad.onion">
+                <NavLink href="http://s4yk6nvxgqqfkg7ndhjmuy7xanqgxyx3gtduakbn5helggev4wcyflad.onion">
                   Onion site 🧅
                 </NavLink>
               </div>
