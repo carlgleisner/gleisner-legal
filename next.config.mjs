@@ -51,11 +51,11 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'same-origin',
   },
-  // {
-  //   key: 'Onion-Location',
-  //   value:
-  //     'http://tv3pzgycq3cbfm5ibmow3ucryfvqvlhcp3pmfsroupfda5g6dnxu6xid.onion',
-  // },
+  {
+    key: 'onion-location',
+    value:
+      'http://quuajjkvad72uncj2vguxf3gmy3ds7ybuunnctk3d2we7hajup2c73ad.onion',
+  },
 ]
 
 // Do not use image optimization for static builds (i.e. onion site)
