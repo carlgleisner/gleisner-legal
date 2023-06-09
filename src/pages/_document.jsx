@@ -85,6 +85,11 @@ export default function Document() {
           content="#18181b"
           media="(prefers-color-scheme: dark)"
         />
+        <script
+          defer
+          data-domain="gleisner.legal"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-zinc-900">
         <Main />
